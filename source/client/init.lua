@@ -4,7 +4,7 @@ RegisterNetEvent('errorism.isonline:update',function (identifier,isOnline)
     IdentifierOnline[identifier] = isOnline
 end)
 
-function IsOnline(identifier)
+function get(identifier)
     return IdentifierOnline[identifier] or false
 end
-exports('IsOnline', IsOnline)
+exports('get', get)

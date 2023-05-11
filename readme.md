@@ -25,7 +25,7 @@ just a simple script that can check player is online by using identifier.
 
 #### Get is player online by identifier.
 ```lua
-exports['errorism.isonline']:IsOnline(identifier)
+exports['errorism.isonline']:get(identifier)
 ```
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
@@ -37,7 +37,7 @@ exports['errorism.isonline']:IsOnline(identifier)
 
 ```lua
 local xPlayer = ESX.GetPlayerFromId(source)
-local isOnline = exports['errorism.isonline']:IsOnline(xPlayer.identifier)
+local isOnline = exports['errorism.isonline']:get(xPlayer.identifier)
 print(isOnline)
 -- Output : true
 ```
