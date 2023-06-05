@@ -5,8 +5,8 @@ AddEventHandler('esx:playerLoaded', function(playerId, xPlayer)
     if not xPlayer then
         xPlayer = ESX.GetPlayerFromId(playerId)
     end
-    IdentifierOnline[xPlayer.identifier] = true
-    TriggerClientEvent('errorism.isonline:update', -1, xPlayer.identifier,true)
+    IdentifierOnline[xPlayer.identifier] = xPlayer.source
+    TriggerClientEvent('errorism.isonline:update', -1, xPlayer.identifier,xPlayer.source)
 end)
 AddEventHandler('playerDropped', function()
     local xPlayer = ESX.GetPlayerFromId(source)

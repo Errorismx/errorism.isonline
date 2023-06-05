@@ -30,7 +30,7 @@ exports['errorism.isonline']:get(identifier)
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `identifier` | `string` | **Required**. Identifier of player |
-| `return` | `boolean` | Is player online |
+| `return` | `boolean` | return targetPlayerId |
 
 
 ## Usage/Examples
@@ -39,7 +39,7 @@ exports['errorism.isonline']:get(identifier)
 local xPlayer = ESX.GetPlayerFromId(source)
 local isOnline = exports['errorism.isonline']:get(xPlayer.identifier)
 print(isOnline)
--- Output : true
+-- Output : 1
 ```
 
 ## Tech Stack
