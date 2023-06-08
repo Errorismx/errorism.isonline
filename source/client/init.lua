@@ -1,11 +1,5 @@
 local IdentifierOnline = {}
 
-AddEventHandler('onResourceStart', function(resource)
-   if resource == GetCurrentResourceName() then
-      TriggerServerEvent('errorism.isonline:fetch')
-   end
-end)
-
 RegisterNetEvent('errorism.isonline:fetch',function (tbl)
     IdentifierOnline = tbl
 end)

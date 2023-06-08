@@ -9,6 +9,7 @@ AddEventHandler('onResourceStart', function(resource)
         IdentifierOnline[xPlayer.identifier] = xPlayer.source
       end
     end
+    TriggerClientEvent('errorism.isonline:fetch', -1, IdentifierOnline)
 end)
 
 AddEventHandler('esx:playerLoaded', function(playerId, xPlayer)
@@ -17,6 +18,7 @@ AddEventHandler('esx:playerLoaded', function(playerId, xPlayer)
     end
     IdentifierOnline[xPlayer.identifier] = xPlayer.source
     TriggerClientEvent('errorism.isonline:update', -1, xPlayer.identifier,xPlayer.source)
+    TriggerClientEvent('errorism.isonline:fetch', xPlayer.source, IdentifierOnline)
 end)
 AddEventHandler('playerDropped', function()
     local xPlayer = ESX.GetPlayerFromId(source)
